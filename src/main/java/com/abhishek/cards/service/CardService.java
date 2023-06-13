@@ -1,9 +1,14 @@
 package com.abhishek.cards.service;
 
+import com.abhishek.cards.client.ConfigProperties;
 import com.abhishek.cards.model.Card;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 public interface CardService {
 
-    Flux<Card> findCardDetails(int customerId);
+    List<Card> findCardDetails(int customerId);
+
+    Mono<ConfigProperties> getProperties();
 }
