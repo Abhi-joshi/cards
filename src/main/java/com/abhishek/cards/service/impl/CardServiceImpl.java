@@ -28,7 +28,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Mono<ConfigProperties> getProperties() {
-        ConfigProperties configProperties = new ConfigProperties(this.cardsConfig.getMsg());
+        ConfigProperties configProperties = new ConfigProperties(this.cardsConfig.getMsg(), this.cardsConfig.getPassword());
         return Mono.just(configProperties);
     }
 }
